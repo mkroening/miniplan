@@ -1,0 +1,15 @@
+{
+  "name": "miniplan",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.11.1"
+  },
+  "dependencies":{
+    "mocha": "*",
+    "chai": "*",
+    "kanso" : "*"
+  },
+  "scripts" : {
+    "test" : "mocha -R spec"
+  }
+}
