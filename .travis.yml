@@ -10,5 +10,5 @@ services:
 before_script:
     - kanso install
     - curl -X PUT localhost:5984/miniplan_test
-    - kanso push localhost:5984/miniplan
+    - kanso push localhost:5984/miniplan_test
 
