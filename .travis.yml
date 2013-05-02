@@ -1,3 +1,10 @@
 language: node_js
 node_js:
-    - 0.10
+    - "0.11"
+
+env: DB=couchdb
+
+before_script:
+    - kanso install
+    - curl -X PUT localhost:5984/miniplan_test
+    - kanso push localhost:5984/miniplan
