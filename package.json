@@ -7,7 +7,8 @@
   "dependencies":{
     "mocha": "*",
     "chai": "*",
-    "kanso" : "*"
+    "kanso" : "*",
+    "sinon" : "*"
   },
   "scripts" : {
     "test" : "mocha -R spec"
