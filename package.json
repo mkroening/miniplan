@@ -8,7 +8,8 @@
     "mocha": "*",
     "chai": "*",
     "kanso" : "*",
-    "sinon" : "*"
+    "sinon" : "*",
+    "sha1" : "*"
   },
   "scripts" : {
     "test" : "mocha -R spec"
