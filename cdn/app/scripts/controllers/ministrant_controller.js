@@ -1,13 +1,11 @@
 
 App.MinistrantController = Ember.ObjectController.extend({
-
 	actions : {
 		save : function () {
-			App.pouch.PUT(this.get("model")).then(function () {
-			}, function () {
-				console.log(arguments);	
-			});
+			this.get('model').save();
+		},
+		revert : function () {
+			this.get('model').rollback();
 		}
 	}
-
 });

@@ -1,7 +1,5 @@
 
-App.pouch = EPDB.Storage.create({
-	dbName: "miniplan",
-	docTypes: {
-		ministrant: App.Ministrant
-	}
+App.Store = DS.Store.extend({
+	adapter : DS.FixtureAdapter
 });
+

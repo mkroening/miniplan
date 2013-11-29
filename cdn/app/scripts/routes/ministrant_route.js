@@ -1,7 +1,7 @@
 
 App.MinistrantRoute = Ember.Route.extend({
   model: function(params) {
-		return App.pouch.GET(params.ministrant_id);
+		return this.get('store').find('ministrant', params.ministrant_id);
   }
 });
 
