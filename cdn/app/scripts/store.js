@@ -1,2 +1,7 @@
-//CdnYo.Store = DS.Store.extend();
-//CdnYo.ApplicationAdapter = DS.FixtureAdapter;
+
+App.pouch = EPDB.Storage.create({
+	dbName: "miniplan",
+	docTypes: {
+		ministrant: App.Ministrant
+	}
+});

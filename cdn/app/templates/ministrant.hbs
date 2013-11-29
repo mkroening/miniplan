@@ -1,0 +1,65 @@
+
+<div class="small-12 columns">
+	<h2>{{givenName}} {{surName}}</h2>
+</div>
+
+<form data-abide>
+	<div class="small-12 large-6 columns">
+		<fieldset>
+			<legend>Name</legend>
+			<div class="row">
+				<div class="small-6 columns">
+					{{input type="text" value=givenName placeholder="Vorname"}}
+				</div>
+				<div class="small-6 columns">
+					{{input type="text" value=surName placeholder="Nachname"}}
+				</div>
+			</div>
+		</fieldset>
+<!--	</div>
+	<div class="small-12 large-6 columns">-->
+		<fieldset>
+			<legend>Kontaktmöglichkeiten</legend>
+			<div class="row collapse">
+				<div class="small-3 columns">
+					<select class="prefix"><option>@</option><option>A</option></select>
+				</div>
+				<div class="small-9 columns">
+					<input type="email" value="mail@jonasw.de">
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	<div class="small-12 large-6 columns">
+		<fieldset>
+			<legend>Daten</legend>
+			<div class="row">
+				<div class="small-12 columns">
+					<label>Geburtsdatum</label>
+				  {{input type="date" value=birthDate placeholder="1970-01-01"}}	
+				</div>
+				<div class="small-12 columns">
+					<label>Eintrittsdatum</label>
+				  {{input type="date" value=joinDate placeholder="1970-01-01"}}	
+				</div>
+				<div class="small-12 columns">
+					<label>Austrittsdatum</label>
+				  {{input type="date" value=resignationDate placeholder="1970-01-01"}}	
+				</div>
+			</div>
+		</fieldset>
+<!--	</div>
+	<div class="small-12 large-6 columns">-->
+		<fieldset>
+			<legend></legend>
+			<div class="row">
+				<div class="small-6 columns">
+					<a class="button secondary" {{action "revert"}}>Zurücksetzen</a>
+				</div>
+				<div class="small-6 columns">
+					<a class="button" {{action "save"}}>Speichern</a>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</form>

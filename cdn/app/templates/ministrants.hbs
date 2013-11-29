@@ -1,0 +1,9 @@
+<h1>ministrants</h1>
+
+<ul>
+ {{#each model}}
+ <li>{{#linkTo 'ministrant' this}}{{givenName}} {{surName}}{{/linkTo}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
