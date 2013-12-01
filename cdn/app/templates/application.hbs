@@ -9,15 +9,14 @@
 	</ul>
 	<section class="top-bar-section">
 		<ul class="right">
-			<li class="active">{{#link-to 'ministrants'}}Ministranten{{/link-to}}</li>
-			<li class="has-dropdown">
-			<a href="#">Minipläne</a>
+			{{#link-to 'ministrants' tagName="li"}}<a {{bind-attr href=view.href}}>Ministranten</a>{{/link-to}}
+			{{#link-to 'miniplaene' tagName="li" class="has-dropdown"}}<a {{bind-attr href=view.href}}>Minipläne</a>
 			<ul class="dropdown">
 				<li>
 				<a href="#">First link in dropdown</a>
 				</li>
 			</ul>
-			</li>
+			{{/link-to}}
 		</ul>
 	</section>
 </nav>

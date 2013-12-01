@@ -8,7 +8,13 @@ App.Ministrant = DS.Model.extend({
 	dateOfJoin : DS.attr('string'),
 	dateOfResignation : DS.attr('string'),*/
 
-	contactPossibilities : DS.hasMany('ContactPossibility', {async: true})
+	contactPossibilities : DS.hasMany('ContactPossibility', {async: true}),
+
+	shortenedName : function () {
+		var surNameParts = this.get('surName').split(' ');
+		return this.get('givenName') + ' ' + surNameParts.map(function (x) {
+			return ('' + x).slice(0,1) + '.'; }).join(' ');
+	}.property('givenName', 'surName')
 });
 
 App.Ministrant.FIXTURES = [

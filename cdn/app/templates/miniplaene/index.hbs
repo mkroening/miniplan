@@ -1,0 +1,17 @@
+
+<div class="small-12 columns">
+	<ul class="breadcrumbs">
+		<li>{{#link-to 'index'}}Miniplan{{/link-to}}
+		<li class="active">Minipläne</li>
+	</ul>
+</div>
+
+<div class="small-12 columns">
+	<h1>Minipläne</h1>
+	
+	<ul>
+		{{#each model}}
+		<li>{{#link-to 'miniplaene.edit' this}}{{internalTitle}}{{/link-to}}</li>
+		{{/each}}
+	</ul>
+</div>

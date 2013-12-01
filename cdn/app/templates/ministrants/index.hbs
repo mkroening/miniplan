@@ -9,8 +9,11 @@
 
 <h1>Ministranten</h1>
 
-<ul>
+<ul class="ministrantlist">
  {{#each model}}
- <li>{{#linkTo 'ministrant' this}}{{givenName}} {{surName}}{{/linkTo}}</li>
+ <li>{{#linkTo 'ministrants.edit' this}}{{givenName}} {{surName}}{{/linkTo}}</li>
   {{/each}}
+	<li class="new-ministrant">{{#link-to 'ministrants.new'}}neu{{/link-to}}</li>
 </ul>
+
+{{outlet}}

@@ -1,4 +1,4 @@
-App.MinistrantsRoute = Ember.Route.extend({
+App.MinistrantsIndexRoute = Ember.Route.extend({
   model: function() {
 		return this.get('store').findAll('ministrant');
   }
