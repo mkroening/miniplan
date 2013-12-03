@@ -1,11 +1,3 @@
-<div class="small-12 columns">
-	<ul class="breadcrumbs">
-		<li>{{#link-to 'index'}}Miniplan{{/link-to}}</li>
-		<li>{{#link-to 'miniplaene'}}Minipläne{{/link-to}}</li>
-		<li class="active">{{internalTitle}}</li>
-	</ul>
-</div>
-
 
 <div class="small-12 large-9 columns">
 	{{input type="text" class="headlineedit" value=internalTitle}}
@@ -15,9 +7,9 @@
 </div>
 
 <div class="small-12 large-3 columns">
-	<ul>
+	<ul class="ministrant-drag-list">
 		{{#each ministrants}}
-		<li>{{shortenedName}}</li>
+		<li draggable="true">{{shortenedName}}</li>
 		{{/each}}
 	</ul>
 </div>

@@ -1,19 +1,13 @@
 
 <div class="small-12 columns">
-	<ul class="breadcrumbs">
-		<li>{{#link-to 'index'}}Miniplan{{/link-to}}</li>
-		<li class="active">Ministranten</li>
+
+	<h1>Ministranten</h1>
+
+	<ul class="ministrantlist">
+		{{#each model}}
+		<li>{{#linkTo 'ministrants.edit' this}}{{givenName}} {{surName}}{{/linkTo}}</li>
+		{{/each}}
+		<li class="new-ministrant">{{#link-to 'ministrants.new'}}neu{{/link-to}}</li>
 	</ul>
+
 </div>
-
-
-<h1>Ministranten</h1>
-
-<ul class="ministrantlist">
- {{#each model}}
- <li>{{#linkTo 'ministrants.edit' this}}{{givenName}} {{surName}}{{/linkTo}}</li>
-  {{/each}}
-	<li class="new-ministrant">{{#link-to 'ministrants.new'}}neu{{/link-to}}</li>
-</ul>
-
-{{outlet}}

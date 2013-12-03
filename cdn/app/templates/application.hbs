@@ -1,3 +1,4 @@
+<div class="hide-for-touch fixed">
 <nav class="top-bar" data-topbar>
 	<ul class="title-area">
 		<li class="name">
@@ -20,13 +21,47 @@
 		</ul>
 	</section>
 </nav>
-
-<div class="row">
-	<p></p>
 </div>
 
-<div class="row">
-	{{outlet}}
-</div>
+<div class="off-canvas-wrap">
+	<div class="inner-wrap">
+		<nav class="show-for-touch tab-bar">
+			{{#unless isIndex}}
+			<section class="left-small">
+				<a class="tab-bar-icon back" {{action 'transitionUp'}}>
+					<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 150 425" style="height: 80%; text-align: center">
+						<path d="M78.1875 421.875 L11.25 267.1875 L78.1875 112.5 L105.1875 112.5 L38.25 267.1875 L105.1875 421.875 L78.1875 421.875 Z" stroke="none" />
+					</svg>
+				</a>
+			</section>
+			{{/unless}}
+			<section class="middle tab-bar-section">
+				<h1 class="title">Miniplan<sup>by q8e</sup></h1>
+			</section>
+			<section class="right-small">
+				<a class="right-off-canvas-toggle menu-icon"><span></span></a>
+			</section>
+		</nav>
 
+		<aside class="show-for-touch right-off-canvas-menu">
+			<ul class="off-canvas-list">
+				<li><label>Miniplan<sup>by q8e</sup></label></li>
+			{{#link-to 'ministrants' tagName="li"}}<a {{bind-attr href=view.href}}>Ministranten</a>{{/link-to}}
+			{{#link-to 'miniplaene' tagName="li"}}<a {{bind-attr href=view.href}}>Minipläne</a>{{/link-to}}
+			</ul>
+		</aside>
+
+		<section class="main-section">
+			<div class="row">
+				<p></p>
+			</div>
+			<div class="row">
+				{{outlet}}
+			</div>
+
+		</section>
+
+		<a class="exit-off-canvas"></a>
+	</div>
+</div>
 
