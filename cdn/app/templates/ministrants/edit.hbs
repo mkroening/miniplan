@@ -1,11 +1,10 @@
-
 <div class="small-12 columns">
 	<h2>{{givenName}} {{surName}}</h2>
 </div>
 
 <form data-abide>
 	<div class="small-12 large-6 columns">
-		<fieldset>
+		<fieldset class="widget">
 			<legend>Name</legend>
 			<div class="collapse row">
 				<div class="small-6 columns">
@@ -16,9 +15,7 @@
 				</div>
 			</div>
 		</fieldset>
-<!--	</div>
-	<div class="small-12 large-6 columns">-->
-		<fieldset>
+		<fieldset class="widget">
 			<legend>Kontaktmöglichkeiten</legend>
 				{{#each contactPossibilities}}
 				ASD
@@ -27,7 +24,7 @@
 		</fieldset>
 	</div>
 	<div class="small-12 large-6 columns">
-		<fieldset>
+		<fieldset class="widget">
 			<legend>Daten</legend>
 			<div class="row">
 				<div class="small-12 columns">
@@ -44,14 +41,12 @@
 				</div>
 			</div>
 		</fieldset>
-<!--	</div>
-	<div class="small-12 large-6 columns">-->
-		<fieldset>
+		<fieldset class="widget">
 			<div class="row">
-				<div class="small-6 columns">
+				<div class="small-6 columns text-center">
 					<a {{bind-attr class=":button :secondary isDirty::disabled"}} {{action "revert"}}>Zurücksetzen</a>
 				</div>
-				<div class="small-6 columns">
+				<div class="small-6 columns text-center">
 					<a {{bind-attr class=":button :primary isDirty::disabled"}} {{action "save"}}>Speichern</a>
 				</div>
 			</div>
