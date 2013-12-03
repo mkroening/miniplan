@@ -32,7 +32,7 @@ after_script:
   - git submodule add -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/thriqon/miniplan/ site > /dev/null 2>&1
   - cd site
   - if git checkout ; then git checkout -b gh-pages ; fi
-  - git rm -r
+  - git rm -r .
   - cp -R ../dist/* .
   - cp ../dist/.* .
   - git add -f
