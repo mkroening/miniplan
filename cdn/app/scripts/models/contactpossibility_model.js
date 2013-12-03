@@ -1,4 +1,5 @@
-/*global DS*/
+
+"use strict";
 
 App.ContactPossibility = DS.Model.extend({
 	protocol : DS.attr('string'),

@@ -1,3 +1,4 @@
+"use strict";
 
 App.MiniplaeneIndexRoute = Ember.Route.extend({
 	model : function () {

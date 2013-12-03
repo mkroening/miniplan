@@ -3,7 +3,7 @@
     "browser": true,
     "esnext": true,
     "bitwise": false,
-    "curly": false,
+    "curly": true,
     "eqeqeq": true,
     "eqnull": true,
     "immed": true,
@@ -11,13 +11,14 @@
     "newcap": true,
     "noarg": true,
     "undef": true,
-    "strict": false,
-    "trailing": false,
+    "strict": true,
+    "trailing": true,
     "smarttabs": true,
     "globals": {
         "App": true,
         "jQuery": true,
         "Ember": true,
-        "Handlebars": true
+        "Handlebars": true,
+        "DS" : true
     }
 }

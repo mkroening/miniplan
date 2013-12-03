@@ -1,4 +1,4 @@
-
+"use strict";
 App.MinistrantController = Ember.ObjectController.extend({
 	actions : {
 		save : function () {

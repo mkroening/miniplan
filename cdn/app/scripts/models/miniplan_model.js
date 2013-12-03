@@ -1,4 +1,5 @@
-/*global DS */
+
+"use strict";
 
 App.Miniplan = DS.Model.extend({
 	gottesdienste : DS.hasMany('gottesdienst', {async: true}),

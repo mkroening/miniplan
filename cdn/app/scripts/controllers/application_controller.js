@@ -1,4 +1,6 @@
 
+"use strict";
+
 App.ApplicationController = Ember.Controller.extend({
 
 	isIndex : function () {

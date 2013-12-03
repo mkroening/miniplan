@@ -1,4 +1,6 @@
 
+"use strict";
+
 /* global $ */
 
 App.ApplicationView = Ember.View.extend({

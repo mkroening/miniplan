@@ -1,4 +1,5 @@
-/*global DS */
+
+"use strict";
 
 App.Ministrant = DS.Model.extend({
 	givenName : DS.attr('string'),

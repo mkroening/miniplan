@@ -1,3 +1,4 @@
+"use strict";
 
 App.MiniplaeneEditRoute = Ember.Route.extend({
 	model : function (params) {

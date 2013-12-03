@@ -1,4 +1,6 @@
 
+"use strict";
+
 App.GottesdienstController = Ember.ObjectController.extend({
 	splittedEinteilungen : function () {
 		var einteilungen = this.get('model.einteilungen');
