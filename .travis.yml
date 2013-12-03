@@ -35,7 +35,7 @@ after_script:
   - git rm -r .
   - cp -R ../dist/* .
   - cp ../dist/.* .
-  - git add -f
+  - git add -f .
   - git config user.email "travis@m8p.de"
   - git config user.name "Travis"
   - git commit -am "Deploying to gh-pages"
