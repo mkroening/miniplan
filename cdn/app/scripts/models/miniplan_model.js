@@ -1,4 +1,4 @@
-/*global Ember*/
+/*global DS */
 
 App.Miniplan = DS.Model.extend({
 	gottesdienste : DS.hasMany('gottesdienst', {async: true}),

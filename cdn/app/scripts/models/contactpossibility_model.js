@@ -1,4 +1,4 @@
-/*global Ember*/
+/*global DS*/
 
 App.ContactPossibility = DS.Model.extend({
 	protocol : DS.attr('string'),

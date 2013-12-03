@@ -1,4 +1,6 @@
 
+/* global DS */
+
 App.Gottesdienst = DS.Model.extend({
 	date : DS.attr('date'),
 	time : DS.attr('time'),

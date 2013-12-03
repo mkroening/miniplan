@@ -1,4 +1,4 @@
-/*global Ember*/
+/*global DS */
 
 App.Ministrant = DS.Model.extend({
 	givenName : DS.attr('string'),

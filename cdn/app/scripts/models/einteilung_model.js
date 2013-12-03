@@ -1,3 +1,4 @@
+/* global DS */
 
 App.Einteilung = DS.Model.extend({
 	gottesdienst : DS.belongsTo('gottesdienst'),
