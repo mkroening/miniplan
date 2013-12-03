@@ -8,25 +8,25 @@ node_js:
   - "0.9"
   - "0.8"
 
-branches
+branches:
   except:
     - gh-pages
 
-env
+env:
   global:
     secure: "QB3xR/LVHrkz931s6T5IEVBrukNiRPjvcABpCf8MucGUoTZTSUOowOlTXlTXgv9Ve3+8soFgTJ26MnSlcpSOy+nmANW02weaC89TUxVIuuC1CuIvLOpW0ATx1X+AVyEFuLbj3EzI7+mEimazYF+o6PK5yzws6rCcFyXeWYtNHtg="
 
-before_script
+before_script:
   - gem update --system
   - gem install compass
   - npm install -g grunt-cli bower
 
-script
+script:
   - cd cdn
   - bower install
   - grunt
 
-after_script
+after_script:
   - if ${TRAVIS_PULL_REQUEST} = "false"; then exit 0; fi
   - git submodule add -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/thriqon/miniplan/ site > /dev/null 2>&1
   - cd site
@@ -37,5 +37,5 @@ after_script
   - git add -f
   - git config user.email "travis@m8p.de"
   - git config user.name "Travis"
-  - git commit -am "Deploying to gh-pages: ["${TRAVIS_COMMIT}"] in build "${TRAVIS_BUILD_ID}
+  - git commit -am "Deploying to gh-pages"
   - git push https://${GH_OAUTH_TOKEN}@github.com/thriqon/miniplan/ gh-pages > /dev/null 2>&1
