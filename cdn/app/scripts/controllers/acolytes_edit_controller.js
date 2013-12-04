@@ -1,5 +1,5 @@
 "use strict";
-App.MinistrantController = Ember.ObjectController.extend({
+App.AcolytesEditController = Ember.ObjectController.extend({
 	actions : {
 		save : function () {
 			this.get('model').save();

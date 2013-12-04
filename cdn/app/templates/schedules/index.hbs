@@ -1,0 +1,10 @@
+
+<div class="small-12 columns">
+	<h1>{{t app.schedules.title}}</h1>
+	
+	<ul>
+		{{#each model}}
+		<li>{{#link-to 'schedules.edit' this}}{{internalTitle}}{{/link-to}}</li>
+		{{/each}}
+	</ul>
+</div>
