@@ -24,18 +24,21 @@
 
 		<script src="../.tmp/scripts/compiled-templates.js"></script>
 		<script src="../.tmp/scripts/combined-scripts.js"></script>
+		<script>
+			App.setupForTesting();
+			App.injectTestHelpers();
+		</script>
 
     <!-- include spec files here... -->
+		<script src="lib/adapter.js"></script>
+		<script>
+			Ember.Test.adapter = Ember.Test.MochaAdapter.create();
+		</script>
     <script src="spec/test.js"></script>
 
-		<script src="lib/adapter.js"></script>
     <script>
-			App.setupForTesting();
-
 $(document).ready(function () {
 			App.rootElement = "#ember-root-element";
-			Ember.Test.adapter = Ember.Test.MochaAdapter.create();
-			App.injectTestHelpers();
 	mocha.run()
 });
 		</script>

@@ -1,16 +1,17 @@
-/*global describe, it, expect, beforeEach, click, visit, find, fillIn */
+/*global describe, it, expect, beforeEach, click, visit, find, fillIn, afterEach */
 
 'use strict';
 
-(function () {
+(function() {
 
+	var App = window.App;
 	var currentPath = function () {
 		return App.__container__.lookup("controller:application").get("currentRouteName");
 	};
 
 	describe("The Miniplan-App", function () {
-		beforeEach(function () {
-			App.reset();
+		afterEach(function () {
+			window.App.reset();
 		});
 		describe("The main page", function () {
 			beforeEach(function () {
@@ -58,4 +59,4 @@
 			});
 		});
 	});
-})();
+}());

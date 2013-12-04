@@ -75,7 +75,7 @@ module.exports = function (grunt) {
                            mountFolder(connect, yeomanConfig.app)
                            ];
                    }
-               } 
+               }
             },
             test: {
                 options: {
