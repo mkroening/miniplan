@@ -38,3 +38,15 @@ ul.ministrant-drag-list
   
 fieldset.widget
   margin-bottom: 1em
+
+$drag-over-shadow-color: lighten($primary-color, 30%)
+$drag-over-background-color: lighten($primary-color, 60%)
+
+input.drag-over
+  box-shadow: 0 0 5px $drag-over-shadow-color
+  background-color: $drag-over-background-color
+
+.leftoffcanvas
+  position: absolute
+  left: -4000px
+  top: 0px

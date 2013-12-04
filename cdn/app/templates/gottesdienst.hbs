@@ -16,11 +16,11 @@
 		{{#each splittedEinteilungen}}
 		<div class="collapse row">
 			<div class="small-5 columns">
-				{{input type="text" value=links.ministrant.shortenedName}}
+				{{view App.DroppableTextView model=links.ministrant}}
 			</div>
 			<div class="small-2 columns text-center"><span class="prefix"> und </span></div>
 			<div class="small-5 columns">
-				{{input type="text" value=rechts.ministrant.shortenedName}}
+				{{view App.DroppableTextView model=rechts.ministrant}}
 			</div>
 		</div>
 		{{/each}}

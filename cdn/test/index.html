@@ -7,6 +7,7 @@
 </head>
 <body>
     <div id="mocha"></div>
+		<div id="ember-root-element" style="display: none"></div>
     <script src="lib/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
     <!-- assertion framework -->
@@ -14,10 +15,29 @@
     <script>var expect = chai.expect</script>
 
     <!-- include source files here... -->
+		<script src="../app/bower_components/modernizr/modernizr.js"></script>
+		<script src="../app/bower_components/jquery/jquery.js"></script>
+		<script src="../app/bower_components/handlebars/handlebars.runtime.js"></script>
+		<script src="../app/bower_components/ember/ember.js"></script>
+		<script src="../app/bower_components/ember-data/ember-data.js"></script>
+		<script src="../app/bower_components/foundation/js/foundation.min.js"></script>
+
+		<script src="../.tmp/scripts/compiled-templates.js"></script>
+		<script src="../.tmp/scripts/combined-scripts.js"></script>
 
     <!-- include spec files here... -->
     <script src="spec/test.js"></script>
 
-    <script>mocha.run()</script>
+		<script src="lib/adapter.js"></script>
+    <script>
+			App.setupForTesting();
+
+$(document).ready(function () {
+			App.rootElement = "#ember-root-element";
+			Ember.Test.adapter = Ember.Test.MochaAdapter.create();
+			App.injectTestHelpers();
+	mocha.run()
+});
+		</script>
 </body>
 </html>

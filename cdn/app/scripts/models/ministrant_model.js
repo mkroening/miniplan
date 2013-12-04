@@ -20,7 +20,6 @@ App.Ministrant = DS.Model.extend({
 
 App.Ministrant.FIXTURES = [
 	{id: 1, givenName: "Max", surName: "Mustermann", contactPossibilities: [ 101, 102 ]},
-
 	{id: 2, givenName: "Melanie", surName: "Musterfrau", contactPossibilities: [ 201 ]}
 ];
 
