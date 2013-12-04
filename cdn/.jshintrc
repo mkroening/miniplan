@@ -14,11 +14,13 @@
     "strict": true,
     "trailing": true,
     "smarttabs": true,
+		"expr" : true,
     "globals": {
         "App": true,
         "jQuery": true,
         "Ember": true,
         "Handlebars": true,
-        "DS" : true
+        "DS" : true,
+				"$" : true
     }
 }
