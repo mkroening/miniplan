@@ -53,9 +53,8 @@ module.exports = function (grunt) {
         },
         connect: {
             options: {
-                port: 9000,
-                // change this to '0.0.0.0' to access the server from outside
-                hostname: '0.0.0.0'
+                port: process.env.PORT || 9000,
+                hostname: process.env.IP || '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -67,6 +66,16 @@ module.exports = function (grunt) {
                         ];
                     }
                 }
+            },
+            dev: {
+               options: {
+                   middleware: function (connect) {
+                       return [
+                           mountFolder(connect, '.tmp'),
+                           mountFolder(connect, yeomanConfig.app)
+                           ];
+                   }
+               } 
             },
             test: {
                 options: {
@@ -296,6 +305,17 @@ module.exports = function (grunt) {
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+        }
+
+        if (process.env.C9_USER) {
+            return grunt.task.run([
+            'clean:server',
+            'concurrent:server',
+            'neuter:app',
+            'connect:dev',
+            'open',
+            'watch'
+            ]);
         }
 
         grunt.task.run([

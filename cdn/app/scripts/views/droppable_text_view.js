@@ -19,7 +19,7 @@ App.DroppableTextView = Ember.View.extend({
 
 	loadAndSetAsValue : function (id) {
 		var self = this;
-		self.get('controller.store').find('ministrant', id).then(function (o) {
+		self.get('controller.store').find('acolyte', id).then(function (o) {
 			self.set('model', o);
 			//self.get('controller.model').save();
 		});
@@ -46,13 +46,13 @@ App.DroppableTextView = Ember.View.extend({
 		var self = this;
 
 		self.set('isDraggedOver', false);
-		self.loadAndSetAsValue(event.dataTransfer.getData('application/x-ministrant'));
+		self.loadAndSetAsValue(event.dataTransfer.getData('application/x-acolyte'));
 	},
 
 	click: function (event) {
 		var self = this;
 		if ($('html').hasClass('touch')) {
-			var selectBox = $('#ministrantselectbox');
+			var selectBox = $('#acolyteselectbox');
 			selectBox.offset({top: $(event.target).offset().top});
 			selectBox.val(self.get('model').get('id'));
 			selectBox.off('change'); // remove previous listeners

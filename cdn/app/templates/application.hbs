@@ -3,15 +3,15 @@
 	<ul class="title-area">
 		<li class="name">
 		<h1>
-			<a href="#">Miniplan<sup>by q8e</sup></a>
+			<a href="#">{{t app.title}}{{t app.title.by tagName="sup"}}</a>
 		</h1>
 		</li>
 		<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
 	</ul>
 	<section class="top-bar-section">
 		<ul class="right">
-			{{#link-to 'ministrants' tagName="li"}}<a {{bind-attr href=view.href}}>Ministranten</a>{{/link-to}}
-			{{#link-to 'miniplaene' tagName="li" class="has-dropdown"}}<a {{bind-attr href=view.href}}>Minipläne</a>
+			{{#link-to 'acolytes' tagName="li"}}<a {{bind-attr href=view.href}}>{{t acolytes.title}}</a>{{/link-to}}
+			{{#link-to 'schedules' tagName="li" class="has-dropdown"}}<a {{bind-attr href=view.href}}>Minipläne</a>
 			<ul class="dropdown">
 				<li>
 				<a href="#">First link in dropdown</a>
@@ -46,8 +46,8 @@
 		<aside class="show-for-touch right-off-canvas-menu">
 			<ul class="off-canvas-list">
 				<li><label>Miniplan<sup>by q8e</sup></label></li>
-			{{#link-to 'ministrants' tagName="li"}}<a {{bind-attr href=view.href}}>Ministranten</a>{{/link-to}}
-			{{#link-to 'miniplaene' tagName="li"}}<a {{bind-attr href=view.href}}>Minipläne</a>{{/link-to}}
+			{{#link-to 'acolytes' tagName="li"}}<a {{bind-attr href=view.href}}>Ministranten</a>{{/link-to}}
+			{{#link-to 'schedules' tagName="li"}}<a {{bind-attr href=view.href}}>Minipläne</a>{{/link-to}}
 			</ul>
 		</aside>
 

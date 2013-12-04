@@ -1,0 +1,12 @@
+
+<div class="small-12 columns">
+
+	<h1>Ministranten</h1>
+
+	<ul class="acolytelist">
+		{{#each model}}
+		<li>{{#linkTo 'acolytes.edit' this}}{{givenName}} {{surName}}{{/linkTo}}</li>
+		{{/each}}
+		<li class="new-ministrant">{{#link-to 'acolytes.new'}}neu{{/link-to}}</li>
+	</ul>
+</div>

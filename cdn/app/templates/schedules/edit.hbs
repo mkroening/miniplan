@@ -1,15 +1,15 @@
 
 <div class="small-12 large-9 columns">
 	{{input type="text" class="headlineedit" value=internalTitle}}
-	{{#each gd in gottesdienste}}
-	{{render "gottesdienst" gd}}
+	{{#each s in services}}
+	{{render "service" s}}
 	{{/each}}
 </div>
 
 <div class="hide-for-touch large-3 columns">
-	<ul class="ministrant-drag-list">
-		{{#each ministrants}}
-		{{#view App.MinistrantDraggableTextView value=this}}
+	<ul class="acolyte-drag-list">
+		{{#each acolytes}}
+		{{#view App.AcolyteDraggableTextView value=this}}
 		{{shortenedName}}
 		{{/view}}
 		{{/each}}
@@ -17,8 +17,8 @@
 </div>
 
 <div class="small-12 columns show-for-touch leftoffcanvas">
-	<select id="ministrantselectbox">
-		{{#each ministrants}}
+	<select id="acolyteselectbox">
+		{{#each acolytes}}
 			<option {{bind-attr value=id}}>{{shortenedName}}</option>
 		{{/each}}
 	</select>
