@@ -126,14 +126,6 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
-            }
-        },
         compass: {
             options: {
                 sassDir: '<%= yeoman.app %>/styles',
@@ -299,7 +291,11 @@ module.exports = function (grunt) {
                 src: '<%= yeoman.app %>/scripts/app.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
-        }
+        },
+				buster : {
+					tests: {
+					}
+				}
     });
 
     grunt.registerTask('server', function (target) {
@@ -333,7 +329,7 @@ module.exports = function (grunt) {
         'concurrent:test',
         'connect:test',
         'neuter:app',
-        'mocha'
+        'buster'
     ]);
 
     grunt.registerTask('build', [

@@ -15,13 +15,13 @@ env:
 before_script:
   - gem update --system
   - gem install compass
-  - npm install -g grunt-cli bower
+  - npm install -g grunt-cli bower buster
 
 script:
   - cd cdn
   - npm install
   - bower install
-  - grunt build
+  - grunt
 
 after_success:
   - if ${TRAVIS_PULL_REQUEST} = "false"; then exit 0; fi
