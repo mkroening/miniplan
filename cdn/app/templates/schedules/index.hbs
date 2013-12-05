@@ -1,7 +1,5 @@
 
-<div class="small-12 columns">
-	<h1>{{t schedules.title}}</h1>
-	
+<div class="small-12 columns hide-for-large">
 	<ul>
 		{{#each model}}
 		<li>{{#link-to 'schedules.edit' this}}{{internalTitle}}{{/link-to}}</li>
