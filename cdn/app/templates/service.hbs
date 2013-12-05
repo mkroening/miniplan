@@ -16,11 +16,11 @@
 		{{#each splittedAssignments}}
 		<div class="collapse row">
 			<div class="small-5 columns">
-				{{view App.DroppableTextView model=links.acolyte}}
+				{{view App.DroppableTextView value=links.acolyte}}
 			</div>
 			<div class="small-2 columns text-center"><span class="prefix"> und </span></div>
 			<div class="small-5 columns">
-				{{view App.DroppableTextView model=rechts.acolyte}}
+				{{view App.DroppableTextView value=rechts.acolyte.shortenedName}}
 			</div>
 		</div>
 		{{/each}}

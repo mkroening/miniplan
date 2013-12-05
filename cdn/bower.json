@@ -5,7 +5,8 @@
     "ember": "~1.2.0",
     "ember-data": "~1.0.0-beta.2",
     "ember-i18n": "~1.5.0",
-    "foundation": "~5.0.2"
+    "foundation": "~5.0.2",
+    "firebase": "*"
   },
   "devDependencies": {
     "ember-mocha-adapter": "0.1.2"
