@@ -75,7 +75,7 @@ module.exports = function (grunt) {
                            mountFolder(connect, yeomanConfig.app)
                            ];
                    }
-               } 
+               }
             },
             test: {
                 options: {
@@ -125,14 +125,6 @@ module.exports = function (grunt) {
                 '!<%= yeoman.app %>/scripts/vendor/*',
                 'test/spec/{,*/}*.js'
             ]
-        },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
-            }
         },
         compass: {
             options: {
@@ -299,7 +291,11 @@ module.exports = function (grunt) {
                 src: '<%= yeoman.app %>/scripts/app.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
-        }
+        },
+				buster : {
+					tests: {
+					}
+				}
     });
 
     grunt.registerTask('server', function (target) {
@@ -333,7 +329,7 @@ module.exports = function (grunt) {
         'concurrent:test',
         'connect:test',
         'neuter:app',
-        'mocha'
+        'buster'
     ]);
 
     grunt.registerTask('build', [
