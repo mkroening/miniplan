@@ -9,9 +9,7 @@ App.DroppableTextView = Ember.View.extend({
 
 	readonly: true,
 	type: 'text',
-	value : function () {
-		return this.get('model').get('shortenedName');
-	}.property('model', 'model.shortenedName'),
+	valueBinding : 'model.shortenedName',
 
 	model : null,
 

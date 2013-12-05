@@ -5,38 +5,37 @@
 <form data-abide>
 	<div class="small-12 large-6 columns">
 		<fieldset class="widget">
-			<legend>Name</legend>
+			<legend>{{t acolytes.name}}</legend>
 			<div class="collapse row">
 				<div class="small-6 columns">
-					{{input type="text" value=givenName placeholder="Vorname"}}
+					{{input type="text" value=givenName placeholderTranslation="acolytes.givenname"}}
 				</div>
 				<div class="small-6 columns">
-					{{input type="text" value=surName placeholder="Nachname"}}
+					{{input type="text" value=surName placeholderTranslation="acolytes.surname"}}
 				</div>
 			</div>
 		</fieldset>
 		<fieldset class="widget">
-			<legend>Kontaktmöglichkeiten</legend>
+			<legend>{{t acolytes.contactpossibilities}}</legend>
 				{{#each contactPossibilities}}
-				ASD
 				{{view Ember.View templateName='contactpossibility'}}
 				{{/each}}
 		</fieldset>
 	</div>
 	<div class="small-12 large-6 columns">
 		<fieldset class="widget">
-			<legend>Daten</legend>
+			<legend>{{t acolytes.dates}}</legend>
 			<div class="row">
 				<div class="small-12 columns">
-					<label>Geburtsdatum</label>
+					<label>{{t acolytes.dateofbirth}}</label>
 				  {{input type="date" value=birthDate placeholder="1970-01-01"}}	
 				</div>
 				<div class="small-12 columns">
-					<label>Eintrittsdatum</label>
+					<label>{{t acolytes.dateofjoin}}</label>
 				  {{input type="date" value=joinDate placeholder="1970-01-01"}}	
 				</div>
 				<div class="small-12 columns">
-					<label>Austrittsdatum</label>
+					<label>{{t acolytes.dateofresignation}}</label>
 				  {{input type="date" value=resignationDate placeholder="1970-01-01"}}	
 				</div>
 			</div>
@@ -44,10 +43,10 @@
 		<fieldset class="widget">
 			<div class="row">
 				<div class="small-6 columns text-center">
-					<a {{bind-attr class=":button :secondary isDirty::disabled"}} {{action "revert"}}>Zurücksetzen</a>
+					<a {{bind-attr class=":button :secondary isDirty::disabled"}} {{action "revert"}}>{{t app.revert}}</a>
 				</div>
 				<div class="small-6 columns text-center">
-					<a {{bind-attr class=":button :primary isDirty::disabled"}} {{action "save"}}>Speichern</a>
+					<a {{bind-attr class=":button :primary isDirty::disabled"}} {{action "save"}}>{{t app.save}}</a>
 				</div>
 			</div>
 		</fieldset>

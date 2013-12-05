@@ -1,13 +1,15 @@
 
+/* global Ember, App */
+
 "use strict";
 
 App.ServiceController = Ember.ObjectController.extend({
-	splittedEinteilungen : function () {
-		var einteilungen = this.get('model.einteilungen');
+	splittedAssignments : function () {
+		var assignments = this.get('model.assignments');
 
 		var res = [];
 		var lastO = null;
-		einteilungen.forEach(function (item, index) {
+		assignments.forEach(function (item, index) {
 			if (index %2 === 0) {
 				lastO = Ember.Object.create({links: item});
 				res.push(lastO);
@@ -16,5 +18,5 @@ App.ServiceController = Ember.ObjectController.extend({
 			}
 		});
 		return Ember.A(res);
-	}.property('einteilungen.@each')
+	}.property('assignments.@each')
 });
