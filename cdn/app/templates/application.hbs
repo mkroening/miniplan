@@ -8,8 +8,9 @@
 		</li>
 		<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
 	</ul>
-	<section class="top-bar-section">
+	<section {{bind-attr class="controller.loggedIn::hide :top-bar-section"}}>
 		<ul class="right">
+			<li><a {{action 'logout'}}>Logout {{controller.loggedInUser.name}}</a></li>
 			{{#link-to 'acolytes' tagName="li"}}<a {{bind-attr href=view.href}}>{{t acolytes.title}}</a>{{/link-to}}
 			{{#link-to 'schedules' tagName="li" class="has-dropdown"}}<a {{bind-attr href=view.href}}>{{t schedules.title}}</a>
 			<ul class="dropdown">
