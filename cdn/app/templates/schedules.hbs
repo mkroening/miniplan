@@ -1,0 +1,16 @@
+
+<div class="small-12 columns">
+	<h1>{{t schedules.title}}</h1>
+</div>
+
+<div class="large-3 columns show-for-large-up">
+	<ul>
+		{{#each model}}
+		<li>{{#link-to 'schedules.edit' this}}{{internalTitle}}{{/link-to}}</li>
+		{{/each}}
+	</ul>
+</div>
+
+<div class="large-9 small-12 columns">
+    {{outlet}}
+</div>
