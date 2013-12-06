@@ -1,8 +1,10 @@
 
+/* global Ember */
+
 var App = window.App = Ember.Application.create({
 });
 
-Ember.TextField.reopen(Em.I18n.TranslateableAttributes);
+Ember.TextField.reopen(Ember.I18n.TranslateableAttributes);
 
 /* Order and include as you please. */
 require('scripts/controllers/*');
