@@ -1,5 +1,7 @@
 "use strict";
 
+/* global EmberFire, Firebase */
+
 App.SchedulesScheduleIndexRoute = Ember.Route.extend({
 	model : function (params) {
 			return EmberFire.Object.create({

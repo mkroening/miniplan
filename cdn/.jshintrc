@@ -21,6 +21,9 @@
         "Ember": true,
         "Handlebars": true,
         "DS" : true,
+				"EmberFire" : true,
+				"Firebase" : true,
+				"FirebaseSimpleLogin" : true,
 				"$" : true
     }
 }

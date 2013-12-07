@@ -1,4 +1,6 @@
 
+"use strict";
+
 App.ChatController = Ember.Controller.extend({
 	text : "",
 	actions : {

@@ -1,5 +1,7 @@
 "use strict";
 
+/* global EmberFire, Firebase */
+
 App.SchedulesIndexRoute = Ember.Route.extend({
 	model : function () {
 //		return this.get('store').findAll('schedule');

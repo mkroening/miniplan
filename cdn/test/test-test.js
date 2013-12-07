@@ -36,13 +36,6 @@ describe('The Miniplan-App', function () {
 				visit("/").then(done);
 			});
 		});
-
-		it("provides a links to acolytes", function (done) {
-			Ember.run(function () {
-				expect(find("a").text()).toContain("Acolytes");
-				done();
-			});
-		});
 	});
 });
 

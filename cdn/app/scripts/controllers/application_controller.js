@@ -19,9 +19,9 @@ App.ApplicationController = Ember.Controller.extend({
 				self.set('loggedInUser', user);
 			} else {
 				self.set('loggedInUser', null);
-			}   
+			}
 		}));
-	},  
+	},
 
 	isIndex : function () {
 		return this.get('currentPath') === 'index';

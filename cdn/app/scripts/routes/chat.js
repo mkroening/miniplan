@@ -1,4 +1,6 @@
 
+"use strict";
+
 App.ChatRoute = Ember.Route.extend({
 	model : function () {
 		return EmberFire.Array.create({

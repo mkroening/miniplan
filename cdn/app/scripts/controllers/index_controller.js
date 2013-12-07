@@ -1,4 +1,6 @@
 
+"use strict";
+
 App.IndexController = Ember.Controller.extend({
 	needs: 'application',
 
@@ -8,7 +10,7 @@ App.IndexController = Ember.Controller.extend({
 	actions : {
 		loginWithGithub : function () {
 			this.get('controllers.application.auth').login('github');
-		},  
+		},
 		loginWithFacebook : function () {
 			this.get('controllers.application.auth').login('facebook');
 		},
