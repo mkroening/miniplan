@@ -1,0 +1,8 @@
+
+<ul class="chatlog">
+	{{#each model}}
+	<li><b>{{authorName}}</b> : {{text}}</li>
+	{{/each}}
+</ul>
+
+{{input type="text" value=text action="sendChatMessage"}}

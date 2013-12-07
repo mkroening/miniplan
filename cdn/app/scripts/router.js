@@ -10,4 +10,6 @@ App.Router.map(function () {
 	this.resource("schedules", function () {
 		this.route("edit", {path: "/:schedule_id"});
 	});
+
+	this.route("chat");
 });
