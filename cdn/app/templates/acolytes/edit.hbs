@@ -1,5 +1,5 @@
 <div class="small-12 columns">
-	<h2>{{givenName}} {{surName}}</h2>
+	<h2>{{givenName}}&nbsp;{{surName}}</h2>
 </div>
 
 <form data-abide>
@@ -37,16 +37,6 @@
 				<div class="small-12 columns">
 					<label>{{t acolytes.dateofresignation}}</label>
 				  {{input type="date" value=resignationDate placeholder="1970-01-01"}}	
-				</div>
-			</div>
-		</fieldset>
-		<fieldset class="widget">
-			<div class="row">
-				<div class="small-6 columns text-center">
-					<a {{bind-attr class=":button :secondary isDirty::disabled"}} {{action "revert"}}>{{t app.revert}}</a>
-				</div>
-				<div class="small-6 columns text-center">
-					<a {{bind-attr class=":button :primary isDirty::disabled"}} {{action "save"}}>{{t app.save}}</a>
 				</div>
 			</div>
 		</fieldset>

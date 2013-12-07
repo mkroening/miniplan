@@ -4,23 +4,23 @@
 	<div class="row">
 		<div class="small-12 columns">
 			<div {{bind-attr class="controllers.application.loggedIn::hide"}}>
-				You are logged in.<br />
-				<a {{action 'logout' target=controllers.application}} class="button primary">Logout</a>
+				{{t message.loggedIn}}<br />
+				<a {{action 'logout' target=controllers.application}} class="button primary">{{t logout}}</a>
 			</div>
 			<div {{bind-attr class="controllers.application.loggedIn:hide"}}>
-				<h2>Login</h2>
+				<h2>{{t login}}</h2>
 				<form>
 					<div class="row">
 						<div class="small-12 columns">
-							{{input type="email" placeholder="email" value=email}}
+							{{input type="email" placeholderTranslation="login.email" value=email}}
 						</div>
 						<div class="small-12 columns">
-							{{input type="password" placeholder="password" value=password}}
+							{{input type="password" placeholderTranslation="login.password" value=password}}
 						</div>
 					</div>
 					<div class="row">
 						<div class="small-4 columns">
-							<a {{action 'loginWithEmail' target=controller}} class="button">Login</a>
+							<a {{action 'loginWithEmail' target=controller}} class="button">{{t login}}</a>
 						</div>
 						<div class="small-8 columns text-right">
 							<a {{action 'loginWithFacebook' target=controller}} class="button"><i class="fa fa-facebook"></i></a>

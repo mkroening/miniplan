@@ -15,5 +15,10 @@ Ember.I18n.translations = {
     "schedules.title" : "Schedules",
     
     "app.revert" : "Revert",
-    "app.save" : "Save"
+    "app.save" : "Save",
+		"logout" : "Logout",
+		"login" : "Login",
+		"message.loggedIn" : "You're logged in.",
+		"login.email" : "email",
+		"login.password" : "password"
 };

@@ -8,7 +8,10 @@ App.Router.map(function () {
 	});
 
 	this.resource("schedules", function () {
-		this.route("edit", {path: "/:schedule_id"});
+		this.resource("schedule", {path: "/:id"}, function () {
+			this.resource("services");
+		});
+
 	});
 
 	this.route("chat");

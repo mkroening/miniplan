@@ -1,0 +1,15 @@
+
+<div class="large-3 columns show-for-large-up">
+	<h1>{{t acolytes.title}}</h1>
+	<ul class="acolytelist">
+		{{#each model}}
+		<li>{{#link-to 'acolytes.edit' this.id}}{{givenName}}&nbsp;{{surName}}{{/link-to}}</li>
+		{{/each}}
+		<li class="divider"></li>
+		<li class="new-acolyte">{{#link-to 'acolytes.new'}}neu{{/link-to}}</li>
+	</ul>
+</div>
+
+<div class="large-9 small-12 columns">
+    {{outlet}}
+</div>

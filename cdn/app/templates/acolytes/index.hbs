@@ -1,12 +1,13 @@
 
-<div class="small-12 columns">
+<div class="small-12 columns hide-for-large-up">
 
 	<h1>{{t acolytes.title}}</h1>
 
 	<ul class="acolytelist">
 		{{#each model}}
-		<li>{{#linkTo 'acolytes.edit' this}}{{givenName}} {{surName}}{{/linkTo}}</li>
+		<li>{{#linkTo 'acolytes.edit' this.id}}{{givenName}} {{surName}}{{/linkTo}}</li>
 		{{/each}}
+		<li class="divider"></li>
 		<li class="new-ministrant">{{#link-to 'acolytes.new'}}neu{{/link-to}}</li>
 	</ul>
 </div>
