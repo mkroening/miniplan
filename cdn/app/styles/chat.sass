@@ -1,0 +1,28 @@
+
+.chatbar
+  border-left: 1px solid grey
+  position: fixed
+  height: 100vh
+  right: 0
+  bottom: 0
+  background-color: #EEEEEE
+  ul.chatlog
+    margin-left: 0
+    overflow: auto
+    list-style-type: none
+    position: absolute
+    bottom: 50px
+    li
+      display: inline-block
+      border: 1px solid grey
+      background-color: white
+      padding: 5px
+      margin-top: 3px
+      width: 100%
+    li:first-of-type
+      margin-top: 60px
+  &>input
+    width: 100%
+    position: absolute
+    bottom: 0
+

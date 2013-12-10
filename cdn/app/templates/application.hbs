@@ -56,8 +56,15 @@
 			<div class="row">
 				<p></p>
 			</div>
-			<div class="row">
-				{{outlet}}
+			<div class="full row">
+				<div class="large-10 small-12 columns">
+					<div class="row">
+						{{outlet}}
+					</div>
+				</div>
+				<div {{bind-attr class=":large-2 :columns controller.loggedIn:hide-for-small:hide :chatbar"}}>
+					{{outlet 'chat'}}
+				</div>
 			</div>
 
 		</section>

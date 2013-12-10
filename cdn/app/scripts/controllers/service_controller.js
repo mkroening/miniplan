@@ -9,14 +9,16 @@ App.ServiceController = Ember.ObjectController.extend({
 
 		var res = [];
 		var lastO = null;
-		assignments.forEach(function (item, index) {
-			if (index %2 === 0) {
-				lastO = Ember.Object.create({links: item});
-				res.push(lastO);
-			} else {
-				lastO.rechts = item;
-			}
-		});
+		if (assignments) {
+			assignments.forEach(function (item, index) {
+				if (index %2 === 0) {
+					lastO = Ember.Object.create({links: item});
+					res.push(lastO);
+				} else {
+					lastO.rechts = item;
+				}
+			});
+		}
 		return Ember.A(res);
 	}.property('assignments.@each')
 });

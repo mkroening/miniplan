@@ -13,12 +13,14 @@ Ember.I18n.translations = {
     "acolytes.givenname" : "Given name",
     "acolytes.surname" : "Sur name",
     "schedules.title" : "Schedules",
+		"schedule.finish" : "Finalize",
     
     "app.revert" : "Revert",
     "app.save" : "Save",
+		"app.delete" : "Delete",
 		"logout" : "Logout",
 		"login" : "Login",
 		"message.loggedIn" : "You're logged in.",
 		"login.email" : "email",
-		"login.password" : "password"
+		"login.password" : "password",
 };

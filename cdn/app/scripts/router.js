@@ -9,6 +9,7 @@ App.Router.map(function () {
 
 	this.resource("schedules", function () {
 		this.resource("schedule", {path: "/:id"}, function () {
+			this.route("new");
 			this.resource("services");
 		});
 

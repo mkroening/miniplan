@@ -6,9 +6,10 @@
 <div class="large-3 columns show-for-large-up">
 	<ul>
 		{{#each model}}
-		<li>{{#link-to 'schedules.edit' this}}{{internalTitle}}{{/link-to}}</li>
+		<li>{{#link-to 'schedule' this.id}}{{internalTitle}}{{/link-to}}</li>
 		{{/each}}
 	</ul>
+	{{#link-to 'schedule' null}}new{{/link-to}}
 </div>
 
 <div class="large-9 small-12 columns">

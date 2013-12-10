@@ -2,16 +2,16 @@
 
 /* global EmberFire, Firebase */
 
-App.SchedulesScheduleIndexRoute = Ember.Route.extend({
+App.ScheduleRoute = Ember.Route.extend({
 	model : function (params) {
 			return EmberFire.Object.create({
-				ref: App.rootFirebase.child("schedules").child(params.schedule_id)
+				ref: App.rootFirebase.child('schedules').child(params.id)
 			});
 	},
 	setupController : function (controller, schedules) {
 		controller.set('model', schedules);
-		controller.set('acolytes', EmberFore.Array.create({
-			ref: App.rootFirebase.child("acolytes")
+		controller.set('acolytes', EmberFire.Array.create({
+			ref: App.rootFirebase.child('acolytes')
 		}));
 	}
 });

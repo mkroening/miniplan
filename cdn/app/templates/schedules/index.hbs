@@ -2,8 +2,8 @@
 <div class="small-12 columns hide-for-large-up">
 	<ul>
 		{{#each model}}
-		<li>{{#link-to 'schedules.edit' this}}{{internalTitle}}{{/link-to}}</li>
+		<li>{{#link-to 'schedule' this}}{{internalTitle}}{{/link-to}}</li>
 		{{/each}}
 	</ul>
-	{{#link-to 'schedules.edit' null}}new{{/link-to}}
+	{{#link-to 'schedule' null}}new{{/link-to}}
 </div>
