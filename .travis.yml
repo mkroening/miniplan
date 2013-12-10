@@ -34,6 +34,7 @@ after_success:
   - git rm -r .
   - cp -R ../dist/* .
   - cp ../dist/.* .
+  - echo "staging.m8p.de" > CNAME
   - git add -f .
   - git config user.email "travis@m8p.de"
   - git config user.name "Travis"
