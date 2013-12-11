@@ -10,7 +10,7 @@ App.SchedulesScheduleIndexRoute = Ember.Route.extend({
 	},
 	setupController : function (controller, schedules) {
 		controller.set('model', schedules);
-		controller.set('acolytes', EmberFore.Array.create({
+		controller.set('acolytes', EmberFire.Array.create({
 			ref: App.rootFirebase.child("acolytes")
 		}));
 	}
