@@ -4,10 +4,7 @@
 	{{#each s in services}}
 	{{render "service" s}}
 	{{/each}}
-
-
 	<hr />
-
 	<a class="small alert button">{{t app.delete}}</a>
 	<a class="small default button">{{t schedule.finish}}</a>
 </div>
@@ -15,9 +12,8 @@
 <div class="hide-for-touch large-3 columns">
 	<ul class="acolyte-drag-list">
 		{{#each acolytes}}
-		<li>B</li>
-		{{#view App.AcolyteDraggableTextView}}
-		A
+		{{#view App.AcolyteDraggableTextView model=this}}
+		{{givenName}} {{surName}}
 		{{/view}}
 		{{/each}}
 	</ul>
